@@ -29,7 +29,9 @@ const int SCENE_TIMELINE = 2;
 
 @implementation CDVWeChat
 
-- (void)show;
+- (void)show {
+
+}
 
 - (void)pluginInitialize {
     NSString* appId = [[self.commandDelegate settings] objectForKey:WECHAT_APPID_KEY];
@@ -222,7 +224,7 @@ const int SCENE_TIMELINE = 2;
     }
     
     //构造SendAuthReq结构体
-    SendAuthReq* req =[[[SendAuthReq alloc ] init ] autorelease ];
+    SendAuthReq* req =[[SendAuthReq alloc ] init];
     req.scope = @"snsapi_userinfo" ;
     req.state = @"123" ;
     //第三方向微信终端发送一个SendAuthReq消息结构
